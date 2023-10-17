@@ -1,6 +1,15 @@
+import React from 'react'
+import ProfileCard from './ProfileCard'
+
 function App() {
   return (
-    <h1>Hello</h1>
+    <>
+      <div>Peronal Digital Assistants</div>
+
+      <ProfileCard />
+      <ProfileCard />
+      <ProfileCard />
+    </>
   )
 }
 
