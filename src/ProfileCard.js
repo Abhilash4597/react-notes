@@ -1,7 +1,10 @@
 import React from 'react'
 
-export default function ProfileCard() {
+export default function ProfileCard(props) {
   return (
-    <div>ProfileCard</div>
+    <>
+        <div>Title is {props.title}</div>
+        <div>Handle is {props.handle}</div>
+    </>
   )
 }
