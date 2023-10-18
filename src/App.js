@@ -10,9 +10,21 @@ function App() {
     <>
       <div>Peronal Digital Assistants</div>
 
-      <ProfileCard title='Alexa' handle='@alexa99' image={AlexaImage} altValue='AlexaImage' />
-      <ProfileCard title='Cortana' handle='@cortana32' image={CortanaImage} altValue='CortanaImage' />
-      <ProfileCard title='Siri' handle='@siri01' image={SiriImage} altValue='SiriImage' />
+      <div className='container'>
+        <section className='section'>   
+          <div className='columns'>
+            <div className='column is-3'>
+              <ProfileCard title='Alexa' handle='@alexa99' image={AlexaImage} altValue='AlexaImage' />
+            </div>
+            <div className='column is-3'>
+              <ProfileCard title='Cortana' handle='@cortana32' image={CortanaImage} altValue='CortanaImage' />
+            </div>
+            <div className='column is-3'>
+              <ProfileCard title='Siri' handle='@siri01' image={SiriImage} altValue='SiriImage' />
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   )
 }
