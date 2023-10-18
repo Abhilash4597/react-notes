@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProfileCard({title,handle,image,altValue}) {
+export default function ProfileCard({title,handle,image,altValue,description}) {
   return (
     <>
       <div className="card">
@@ -14,6 +14,7 @@ export default function ProfileCard({title,handle,image,altValue}) {
             <p className="title is-4">{title}</p>
             <p className="subtitle is-6">{handle}</p>
           </div>
+          <div className='content'>{description}</div>
         </div>
       </div>
     </>
