@@ -42,10 +42,32 @@
 // * SMALL ANIMAL PROJECT
 
 import React from 'react'
+import { useState } from 'react';
 import AnimalShow from './Animal-Component/AnimalShow'
 
+
+function getRandomAnimals(){
+    const animals = ['Dog', 'Cat', 'Bird', 'Elephant', 'Horse', 'Cow'];
+
+    return animals[Math.floor(Math.random() * animals.length)]
+}
+
 export default function App() {
+
+  const[animals,setAnimals]=useState([])
+
+    const handleClick = ()=>{
+        setAnimals([...animals,getRandomAnimals()]);
+    }
+
+    const renderAnimals = animals.map((animal,index)=>{
+      return <AnimalShow type={animal} key={index} />
+    })
+    
   return (
-    <AnimalShow/>
+    <>
+      <button onClick={handleClick}>Add Animal</button> 
+      <div>{renderAnimals}</div> 
+    </>
   )
 }

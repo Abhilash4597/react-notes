@@ -1,19 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export default function AnimalShow() {
-
-    const[animalCount,setAnimalCount]=useState(0)
-
-    const handleClick = ()=>{
-        setAnimalCount(animalCount+1)
-    }
-
+export default function AnimalShow({type}) {
 
     return (
         <>
-            <button onClick={handleClick}>Add Animal</button>
-            <br />
-            Animals to show:{animalCount}
+            <p>{type}</p>
         </>
     )
 }
