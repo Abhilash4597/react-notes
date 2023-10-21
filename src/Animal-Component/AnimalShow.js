@@ -4,7 +4,7 @@ export default function AnimalShow({type}) {
 
     return (
         <>
-            <p>{type}</p>
+            <img src={type} alt={type} />   
         </>
     )
 }
