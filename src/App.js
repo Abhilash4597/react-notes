@@ -67,7 +67,7 @@ export default function App() {
     }
 
     const renderAnimals = animals.map((animal,index)=>{
-      return <AnimalShow type={animal} key={index} />
+      return <AnimalShow type={animal} key={index} alt={animals} />
     })
     
   return (
