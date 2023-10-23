@@ -1,4 +1,5 @@
-// * PRACTICED
+// * PRACTICED JSX 
+
 // import React from 'react'
 // import 'bulma/css/bulma.css'
 // import ProfileCard from './ProfileCard'
@@ -6,7 +7,7 @@
 // import CortanaImage from './images/cortana.png'
 // import SiriImage from './images/siri.png'
 
-// function App() {
+// export default function App() {
 //   return (
 //     <>
 //       <section class="hero is-primary">
@@ -36,7 +37,7 @@
 //   )
 // }
 
-// export default App
+
 
 
 // * SMALL ANIMAL PROJECT
@@ -73,7 +74,7 @@ export default function App() {
   return (
     <>
       <button onClick={handleClick}>Add Animal</button> 
-      <div>{renderAnimals}</div> 
+      <div>{renderAnimals}</div>
     </>
   )
 }
