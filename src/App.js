@@ -45,12 +45,12 @@
 import React from 'react'
 import { useState } from 'react';
 import AnimalShow from './Animal-Component/AnimalShow'
-import birdImage from './Animal-Component/svg/bird.svg'
-import catImage from './Animal-Component/svg/cat.svg'
-import cowImage from './Animal-Component/svg/cow.svg'
-import dogImage from './Animal-Component/svg/dog.svg'
-import gatorImage from './Animal-Component/svg/gator.svg'
-import horseImage from './Animal-Component/svg/horse.svg'
+import birdImage from './Animal-Component/Images/bird.svg'
+import catImage from './Animal-Component/Images/cat.svg'
+import cowImage from './Animal-Component/Images/cow.svg'
+import dogImage from './Animal-Component/Images/dog.svg'
+import gatorImage from './Animal-Component/Images/gator.svg'
+import horseImage from './Animal-Component/Images/horse.svg'
 
 
 function getRandomAnimals(){
