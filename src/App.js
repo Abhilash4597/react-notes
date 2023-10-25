@@ -45,16 +45,10 @@
 import React from 'react'
 import { useState } from 'react';
 import AnimalShow from './Animal-Component/AnimalShow'
-import birdImage from './Animal-Component/Images/bird.svg'
-import catImage from './Animal-Component/Images/cat.svg'
-import cowImage from './Animal-Component/Images/cow.svg'
-import dogImage from './Animal-Component/Images/dog.svg'
-import gatorImage from './Animal-Component/Images/gator.svg'
-import horseImage from './Animal-Component/Images/horse.svg'
 
 
 function getRandomAnimals(){
-    const animals = [birdImage, catImage, cowImage, dogImage, gatorImage, horseImage];
+    const animals = ["bird", "cat", "cow", "dog", "gator", "heart", "horse"];
 
     return animals[Math.floor(Math.random() * animals.length)]
 }
@@ -68,7 +62,7 @@ export default function App() {
     }
 
     const renderAnimals = animals.map((animal,index)=>{
-      return <AnimalShow type={animal} key={index} alt={animals} />
+      return <AnimalShow type={animal} key={index} />
     })
     
   return (
