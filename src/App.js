@@ -1,4 +1,4 @@
-// * PRACTICED JSX 
+// * PRACTICING JSX 
 
 // import React from 'react'
 // import 'bulma/css/bulma.css'
@@ -42,34 +42,39 @@
 
 // * SMALL ANIMAL PROJECT
 
-import React from 'react'
-import { useState } from 'react';
-import AnimalShow from './Animal-Component/AnimalShow'
-import './App.css'
+// import React from 'react'
+// import { useState } from 'react';
+// import AnimalShow from './Animal-Component/AnimalShow'
+// import './Animal-Component/App.css'
 
 
-function getRandomAnimals(){
-    const animals = ["bird", "cat", "cow", "dog", "gator", "horse"];
+// function getRandomAnimals(){
+//     const animals = ["bird", "cat", "cow", "dog", "gator", "horse"];
 
-    return animals[Math.floor(Math.random() * animals.length)]
-}
+//     return animals[Math.floor(Math.random() * animals.length)]
+// }
 
-export default function App() {
+// export default function App() {
 
-  const[animals,setAnimals]=useState([])
+//   const[animals,setAnimals]=useState([])
 
-    const handleClick = ()=>{
-        setAnimals([...animals,getRandomAnimals()]);
-    }
+//     const handleClick = ()=>{
+//         setAnimals([...animals,getRandomAnimals()]);
+//     }
 
-    const renderAnimals = animals.map((animal,index)=>{
-      return <AnimalShow type={animal} key={index} />
-    })
+//     const renderAnimals = animals.map((animal,index)=>{
+//       return <AnimalShow type={animal} key={index} />
+//     })
     
-  return (
-    <div className='app'>
-      <button onClick={handleClick}>Add Animal</button> 
-      <div className='animal_list'>{renderAnimals}</div>
-    </div>
-  )
-}
+//   return (
+//     <div className='app'>
+//       <button onClick={handleClick}>Add Animal</button> 
+//       <div className='animal_list'>{renderAnimals}</div>
+//     </div>
+//   )
+// }
+
+
+
+// * USING API IMAGE PROJECT
+
