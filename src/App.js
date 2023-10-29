@@ -79,9 +79,15 @@
 // * USING API IMAGE PROJECT
 
 import React from 'react'
+import searchImages from './API-Components/Api'
+
+searchImages()
+
 
 export default function App() {
   return (
-    <div>App</div>
+    <>
+      <div>App</div>
+    </>
   )
 }
