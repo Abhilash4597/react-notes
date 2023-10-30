@@ -78,17 +78,27 @@
 
 // * USING API IMAGE PROJECT
 
-import React from 'react'
+import React, { useState } from 'react'
 import SearchBar from './API-Components/SearchBar'
+import searchImages from './API-Components/Api'
+import ImageList from './API-Components/ImageList'
 
 export default function App() {
 
-  const handleSubmit = (term)=>{
-    console.log(term)
+  const [images,setImages] = useState([]);
+
+  const handleSubmit = async (term) => {
+    const result = await searchImages(term);
+
+    setImages(result);
+    
   }
+
   return (
     <>
       <SearchBar onSubmit={handleSubmit} />
+      
+      <ImageList images={images} />
     </>
   )
 }

@@ -6,7 +6,7 @@ const searchImages = async (term) => {
             Authorization:'Client-ID I8NRLHkfLvwUxvgv20lhd_g2Rotzo90CJ6y0z2ldZT0'
         },
         params:{
-            query:"cars"
+            query:term
         }
     })
     return response.data.results;
