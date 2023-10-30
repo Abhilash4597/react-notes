@@ -79,15 +79,16 @@
 // * USING API IMAGE PROJECT
 
 import React from 'react'
-import searchImages from './API-Components/Api'
-
-searchImages()
-
+import SearchBar from './API-Components/SearchBar'
 
 export default function App() {
+
+  const handleSubmit = (term)=>{
+    console.log(term)
+  }
   return (
     <>
-      <div>App</div>
+      <SearchBar onSubmit={handleSubmit} />
     </>
   )
 }
