@@ -7,6 +7,7 @@ export default function ImageList({images}) {
   const renderedImage = images.map((img)=>{
     return <ImageShow image={img} key={img.id}/>
   })
+  
   return (
     <div className='image_list'>
       {renderedImage}
