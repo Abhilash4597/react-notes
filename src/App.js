@@ -78,27 +78,39 @@
 
 // * USING API IMAGE PROJECT
 
-import React, { useState } from 'react'
-import SearchBar from './API-Components/SearchBar'
-import searchImages from './API-Components/Api'
-import ImageList from './API-Components/ImageList'
+// import React, { useState } from 'react'
+// import SearchBar from './API-Components/SearchBar'
+// import searchImages from './API-Components/Api'
+// import ImageList from './API-Components/ImageList'
+
+// export default function App() {
+
+//   const [images,setImages] = useState([]);
+
+//   const handleSubmit = async (term) => {
+//     const result = await searchImages(term);
+
+//     setImages(result);
+    
+//   }
+
+//   return (
+//     <>
+//       <SearchBar onSubmit={handleSubmit} />
+      
+//       <ImageList images={images} />
+//     </>
+//   )
+// }
+
+
+// * BOOKS PROJECT
+
+import React from 'react'
 
 export default function App() {
-
-  const [images,setImages] = useState([]);
-
-  const handleSubmit = async (term) => {
-    const result = await searchImages(term);
-
-    setImages(result);
-    
-  }
-
   return (
-    <>
-      <SearchBar onSubmit={handleSubmit} />
-      
-      <ImageList images={images} />
-    </>
+    <div>App</div>
   )
 }
+
