@@ -114,7 +114,7 @@ export default function App() {
   const[books,setBooks] = useState([]);
 
   const createBook = (title)=>{
-    console.log(title);
+    console.log(`title came from bookcreate component ${title}`);
   }
 
   return (
