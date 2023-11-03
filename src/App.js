@@ -106,15 +106,21 @@
 
 // * BOOKS PROJECT
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import BookCreate from './Books-Components/BookCreate';
 
 export default function App() {
 
   const[books,setBooks] = useState([]);
 
+  const createBook = (title)=>{
+    console.log(title);
+  }
 
   return (
-    <div>App</div>
+    <div>
+      <BookCreate onCreate={createBook} />
+    </div>
   )
 }
 
