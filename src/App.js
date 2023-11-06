@@ -116,8 +116,17 @@ export default function App() {
 
   const createBook = (title)=>{
     const updatedBooks = [...books,{id:Math.round(Math.random()*9999), title}];
-
     setBooks(updatedBooks)
+  }
+
+  const editBookById = (id,newTitle)=>{
+    const updateBooks = books.map((book)=>{
+      if(book.id===id){
+        return {...book, title:newTitle};
+      }
+      return book;
+    });
+    setBooks(updateBooks);
   }
 
   const deleteBookById = (id)=>{
@@ -129,7 +138,7 @@ export default function App() {
 
   return (
     <div className='app'>
-      <BookList books={books} onDelete={deleteBookById}/>
+      <BookList books={books} onDelete={deleteBookById} onEdit={editBookById} />
       <BookCreate onCreate={createBook} />
     </div>
   )
