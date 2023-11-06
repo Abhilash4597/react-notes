@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function BookShow() {
+export default function BookShow({book}) {
   return (
-    <div>BookShow</div>
+    <div className='book-show'>
+      <h1>{book.title}</h1>
+    </div>
   )
 }
