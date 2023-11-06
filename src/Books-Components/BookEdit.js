@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function BookEdit({book,onEdit}) {
+export default function BookEdit({book,onEdit,onSubmit}) {
 
   const [title, setTitle] = useState(book.title);
 
@@ -11,6 +11,7 @@ export default function BookEdit({book,onEdit}) {
   const handleSubmit = (e)=>{
     e.preventDefault();
     onEdit(book.id, title);
+    onSubmit();
   }
 
   return (
