@@ -10,3 +10,21 @@ Content-Type: application/json
 {
     "title":"Harry Potter"
 }
+
+####
+
+PUT http://localhost:3001/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "1"
+}
+
+####
+
+DELETE  http://localhost:3001/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "1"
+}
