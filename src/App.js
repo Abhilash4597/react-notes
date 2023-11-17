@@ -120,6 +120,8 @@ export default function App() {
       title:title
     });
     console.log(response)
+    const updatedBooks = [...books,response.data];
+    setBooks(updatedBooks);
   }
   
   // const createBook = (title)=>{
