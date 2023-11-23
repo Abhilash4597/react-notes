@@ -115,6 +115,8 @@ export default function App() {
 
   const[books,setBooks] = useState([]);
 
+    // *------------------------------------------------------ NEW WAY
+
   const createBook = async (title)=>{
     let response = await axios.post('http://localhost:3001/books', {
       title:title
@@ -123,7 +125,7 @@ export default function App() {
     const updatedBooks = [...books,response.data];
     setBooks(updatedBooks);
   }
-  
+    // *------------------------------------------------------ OLD WAY
   // const createBook = (title)=>{
   //   const updatedBooks = [...books,{id:Math.round(Math.random()*9999), title}];
   //   setBooks(updatedBooks)
