@@ -106,7 +106,7 @@
 
 // * BOOKS PROJECT
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BookCreate from './Books-Components/BookCreate';
 import BookList from './Books-Components/BookList'
 import axios from 'axios';
@@ -115,17 +115,27 @@ export default function App() {
 
   const[books,setBooks] = useState([]);
 
-    // *------------------------------------------------------ NEW WAY
+  const fetchBooks = async ()=>{
+    const response = await axios.get('http://localhost:3001/books');
+    setBooks(response.data);
+  }
+
+  useEffect(()=>{
+    fetchBooks();
+  },[]);
+
+
+// *------------------------------------------------------ NEW WAY
 
   const createBook = async (title)=>{
     let response = await axios.post('http://localhost:3001/books', {
       title:title
     });
-    console.log(response)
     const updatedBooks = [...books,response.data];
     setBooks(updatedBooks);
   }
-    // *------------------------------------------------------ OLD WAY
+
+// *------------------------------------------------------ OLD WAY
   // const createBook = (title)=>{
   //   const updatedBooks = [...books,{id:Math.round(Math.random()*9999), title}];
   //   setBooks(updatedBooks)
