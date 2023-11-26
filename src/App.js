@@ -168,6 +168,8 @@ export default function App() {
   //   setBooks(updateBooks);
   // }
 
+// *------------------------------------------------------ NEW WAY
+
   const deleteBookById = async (id)=>{
     await axios.delete(`http://localhost:3001/books/${id}`)
     const updatedBooks = books.filter((book)=>{
@@ -176,7 +178,7 @@ export default function App() {
     setBooks(updatedBooks);
   }
 
-
+// *------------------------------------------------------ OLD WAY
   // const deleteBookById = (id)=>{
   //   const updatedBooks = books.filter((book)=>{
   //     return book.id !== id;
