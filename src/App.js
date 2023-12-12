@@ -1,4 +1,4 @@
-// * PRACTICING JSX 
+// *------------------------------  PRACTICING JSX 
 
 // import React from 'react'
 // import 'bulma/css/bulma.css'
@@ -40,7 +40,7 @@
 
 
 
-// * SMALL ANIMAL PROJECT
+// *------------------------------  SMALL ANIMAL PROJECT
 
 // import React from 'react'
 // import { useState } from 'react';
@@ -76,7 +76,7 @@
 
 
 
-// * USING API IMAGE PROJECT
+// *------------------------------ USING API IMAGE PROJECT
 
 // import React, { useState } from 'react'
 // import SearchBar from './API-Components/SearchBar'
@@ -104,7 +104,7 @@
 // }
 
 
-// * BOOKS PROJECT
+// *------------------------------  BOOKS PROJECT
 
 import React, { useEffect, useState } from 'react';
 import BookCreate from './Books-Components/BookCreate';
