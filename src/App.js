@@ -1,4 +1,4 @@
-// *------------------------------  PRACTICING JSX 
+// * ------------------------------  PRACTICING JSX 
 
 // import React from 'react'
 // import 'bulma/css/bulma.css'
@@ -40,7 +40,7 @@
 
 
 
-// *------------------------------  SMALL ANIMAL PROJECT
+// * ------------------------------  SMALL ANIMAL PROJECT
 
 // import React from 'react'
 // import { useState } from 'react';
@@ -76,7 +76,7 @@
 
 
 
-// *------------------------------ USING API IMAGE PROJECT
+// * ------------------------------ USING API IMAGE PROJECT
 
 // import React, { useState } from 'react'
 // import SearchBar from './API-Components/SearchBar'
@@ -104,7 +104,7 @@
 // }
 
 
-// *------------------------------  BOOKS PROJECT
+// * ------------------------------  BOOKS PROJECT
 
 import React, { useEffect, useState } from 'react';
 import BookCreate from './Books-Components/BookCreate';
@@ -125,7 +125,7 @@ export default function App() {
   },[]);
 
 
-// *------------------------------------------------------ NEW WAY
+// * ------------------------------------------------------ NEW WAY
 
   const createBook = async (title)=>{
     let response = await axios.post('http://localhost:3001/books', {
@@ -135,14 +135,14 @@ export default function App() {
     setBooks(updatedBooks);
   }
 
-// *------------------------------------------------------ OLD WAY
+// * ------------------------------------------------------ OLD WAY
   // const createBook = (title)=>{
   //   const updatedBooks = [...books,{id:Math.round(Math.random()*9999), title}];
   //   setBooks(updatedBooks)
   // }
 
   
-  // *------------------------------------------------------ NEW WAY
+// * ------------------------------------------------------ NEW WAY
   
   const editBookById = async (id,newTitle)=>{
     const response = await axios.put(`http://localhost:3001/books/${id}`,{
@@ -157,7 +157,7 @@ export default function App() {
     setBooks(updateBooks);
   }
 
-// *------------------------------------------------------ OLD WAY
+// * ------------------------------------------------------ OLD WAY
   // const editBookById = (id,newTitle)=>{
   //   const updateBooks = books.map((book)=>{
   //     if(book.id===id){
@@ -168,7 +168,7 @@ export default function App() {
   //   setBooks(updateBooks);
   // }
 
-// *------------------------------------------------------ NEW WAY
+// * ------------------------------------------------------ NEW WAY
 
   const deleteBookById = async (id)=>{
     await axios.delete(`http://localhost:3001/books/${id}`)
@@ -178,7 +178,7 @@ export default function App() {
     setBooks(updatedBooks);
   }
 
-// *------------------------------------------------------ OLD WAY
+// * ------------------------------------------------------ OLD WAY
   // const deleteBookById = (id)=>{
   //   const updatedBooks = books.filter((book)=>{
   //     return book.id !== id;
