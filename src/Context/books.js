@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 const BooksContext = createContext();
 
 function Provider({children}){
-    const [count, setCount] = useState(5);
+    const [count, setCount] = useState(0);
 
     const valueToShare = {
         count:count,
