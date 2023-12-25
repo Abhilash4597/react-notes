@@ -3,14 +3,16 @@ import { createContext, useState } from "react";
 const BooksContext = createContext();
 
 // Just Use Of CreateContext
- 
+
 function Provider({children}) {
     const [count, setCount] = useState(1);
 
     const valueToShare = {
         count:count,
         incrementCount : ()=>{
-            setCount(count+1);
+            if(count>=0){
+                setCount(count+1);
+            }
         },
     };
 
