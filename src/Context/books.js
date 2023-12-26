@@ -5,7 +5,7 @@ const BooksContext = createContext();
 // Just Use Of CreateContext
 
 function Provider({children}) {
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
 
     const valueToShare = {
         count:count,
