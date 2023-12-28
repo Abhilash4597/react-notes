@@ -10,9 +10,7 @@ function Provider({children}) {
     const valueToShare = {
         count:count,
         incrementCount : ()=>{
-            if(count>=0){
-                setCount(count+1);
-            }
+            setCount(count+1);
         },
     };
 
