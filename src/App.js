@@ -106,34 +106,28 @@
 
 // * ------------------------------  BOOKS PROJECT
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import BookCreate from './Books-Components/BookCreate';
 import BookList from './Books-Components/BookList'
-import axios from 'axios';
+// import axios from 'axios';
 
 export default function App() {
 
-  const[books,setBooks] = useState([]);
-
-  const fetchBooks = async ()=>{
-    const response = await axios.get('http://localhost:3001/books');
-    setBooks(response.data);
-  }
-
+ 
   useEffect(()=>{
-    fetchBooks();
+    // fetchBooks();
   },[]);
 
 
 // * ------------------------------------------------------ NEW WAY
 
-  const createBook = async (title)=>{
-    let response = await axios.post('http://localhost:3001/books', {
-      title:title
-    });
-    const updatedBooks = [...books,response.data];
-    setBooks(updatedBooks);
-  }
+  // const createBook = async (title)=>{
+  //   let response = await axios.post('http://localhost:3001/books', {
+  //     title:title
+  //   });
+  //   const updatedBooks = [...books,response.data];
+  //   setBooks(updatedBooks);
+  // }
 
 // * ------------------------------------------------------ OLD WAY
   // const createBook = (title)=>{
@@ -144,18 +138,18 @@ export default function App() {
   
 // * ------------------------------------------------------ NEW WAY
   
-  const editBookById = async (id,newTitle)=>{
-    const response = await axios.put(`http://localhost:3001/books/${id}`,{
-        title : newTitle,
-    })
-    const updateBooks = books.map((book)=>{
-      if(book.id===id){
-        return {...book, ...response.data};
-      }
-      return book;
-    });
-    setBooks(updateBooks);
-  }
+  // const editBookById = async (id,newTitle)=>{
+  //   const response = await axios.put(`http://localhost:3001/books/${id}`,{
+  //       title : newTitle,
+  //   })
+  //   const updateBooks = books.map((book)=>{
+  //     if(book.id===id){
+  //       return {...book, ...response.data};
+  //     }
+  //     return book;
+  //   });
+  //   setBooks(updateBooks);
+  // }
 
 // * ------------------------------------------------------ OLD WAY
   // const editBookById = (id,newTitle)=>{
@@ -170,13 +164,13 @@ export default function App() {
 
 // * ------------------------------------------------------ NEW WAY
 
-  const deleteBookById = async (id)=>{
-    await axios.delete(`http://localhost:3001/books/${id}`)
-    const updatedBooks = books.filter((book)=>{
-      return book.id !== id;
-    })
-    setBooks(updatedBooks);
-  }
+  // const deleteBookById = async (id)=>{
+  //   await axios.delete(`http://localhost:3001/books/${id}`)
+  //   const updatedBooks = books.filter((book)=>{
+  //     return book.id !== id;
+  //   })
+  //   setBooks(updatedBooks);
+  // }
 
 // * ------------------------------------------------------ OLD WAY
   // const deleteBookById = (id)=>{
@@ -189,8 +183,10 @@ export default function App() {
   return (
     <div className='app'>
       <h1>Reading List</h1>
-      <BookList books={books} onDelete={deleteBookById} onEdit={editBookById} />
-      <BookCreate onCreate={createBook} />
+      {/* <BookList books={books} onDelete={deleteBookById} onEdit={editBookById} />
+      <BookCreate onCreate={createBook} /> */}
+      <BookList />
+      <BookCreate />
     </div>
   )
 }
