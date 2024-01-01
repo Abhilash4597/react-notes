@@ -106,16 +106,18 @@
 
 // * ------------------------------  BOOKS PROJECT
 
-import React, { useEffect } from 'react';
+import React, { useEffect , useContext} from 'react';
 import BookCreate from './Books-Components/BookCreate';
 import BookList from './Books-Components/BookList'
+import BooksContext from './Context/books';
 // import axios from 'axios';
 
 export default function App() {
 
+  const { fetchBooks } = useContext(BooksContext);
  
   useEffect(()=>{
-    // fetchBooks();
+    fetchBooks();
   },[]);
 
 
