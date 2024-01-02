@@ -2,11 +2,11 @@ import React, { useState , useContext } from 'react'
 import BooksContext from '../Context/books';
 
 
-export default function BookEdit() {
+export default function BookEdit({book,onSubmit}) {
 
-  const { books , editBookById } = useContext(BooksContext)
+  const { editBookById } = useContext(BooksContext)
 
-  const [title, setTitle] = useState(books.title);
+  const [title, setTitle] = useState(book.title);
 
   const handleChange = (e)=>{
     setTitle(e.target.value);
@@ -14,7 +14,8 @@ export default function BookEdit() {
 
   const handleSubmit = (e)=>{
     e.preventDefault();
-    editBookById(books.id, title);
+    onSubmit();
+    editBookById(book.id, title);
   }
 
   return (

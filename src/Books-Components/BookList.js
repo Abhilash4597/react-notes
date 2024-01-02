@@ -1,14 +1,17 @@
 import React from 'react'
 import BookShow from './BookShow'
-// import { useContext } from 'react'
-// import BooksContext from '../Context/books'
+import { useContext } from 'react'
+import BooksContext from '../Context/books'
 
-export default function BookList({books,onDelete,onEdit}) {
+export default function BookList() {
   //* Practicing the Createcontext
   // const {count, incrementCount} = useContext(BooksContext);
   //* Practicing the Createcontext
+
+  const {books} = useContext(BooksContext);
+
   const renderedBooks = books.map((book)=>{
-    return <BookShow book={book} key={book.id} onDelete={onDelete} onEdit={onEdit} />
+    return <BookShow book={book} key={book.id} />
   })
   return (
     /*     
