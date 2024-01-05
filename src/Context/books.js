@@ -5,7 +5,7 @@ const BooksContext = createContext();
 
 function Provider({children}) {
 
-    //* Practicing the Createcontext
+//* Practicing the Createcontext
     // const [count, setCount] = useState(0);
 
     // const valueToShare = {
@@ -16,14 +16,14 @@ function Provider({children}) {
     // };
     //* Practicing the Createcontext
 
-     const[books,setBooks] = useState([]);
+  const[books,setBooks] = useState([]);
 
   const fetchBooks = async ()=>{
     const response = await axios.get('http://localhost:3001/books');
     setBooks(response.data);
   }
 
-   const createBook = async (title)=>{
+  const createBook = async (title)=>{
     let response = await axios.post('http://localhost:3001/books', {
       title:title
     });
